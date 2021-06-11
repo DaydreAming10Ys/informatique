@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# to forbid the access of file directory
+Options -Indexes
+
+# to hide the files of file directory
+IndexIgnore *
+
